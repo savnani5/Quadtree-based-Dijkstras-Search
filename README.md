@@ -11,4 +11,4 @@ One noteworthy thing to observe is, we ge the sub-optimal path because of the la
 ![Quadtree Decomposition](./Results/grid.png)
 
 ### Dijkstra's Search
-![Quadtree Decomposition](./Results/grid_search.png)
+![Dijkstra's Search](./Results/grid_search.PNG)
