@@ -22,8 +22,8 @@ sys.setrecursionlimit(10**6)
 def length(i):
     return int(((i[1][1] - i[0][1])**2 + (i[1][0] - i[0][0])**2)**0.5)
 
-
-def cell_checker(cell_points, obstacle_points): ## check order of cell_points ## cell points is a list of 4 points of the cell and obstacle_edges is a list of lists of corner points of obstacles
+## check order of cell_points ## cell_points is a list of 4 points of the cell and obstacle_edges is a list of lists of corner points of obstacles
+def cell_checker(cell_points, obstacle_points): 
     cell_edges = [[cell_points[0], cell_points[1]],[cell_points[1], cell_points[2]],[cell_points[2], cell_points[3]],[cell_points[3], cell_points[0]]]
     
     polya = Polygon([cell_points[0], cell_points[1], cell_points[2], cell_points[3]]) 
@@ -139,7 +139,7 @@ def quadtree(cell_points):
               
 if __name__=="__main__":
     
-    image = cv2.imread('obs_course1.png')
+    image = cv2.imread('obstacle_course//obs_course.png')
     image = cv2.resize(image, (450,450))
     image_dummy = image.copy()
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -209,7 +209,7 @@ if __name__=="__main__":
     quadtree([(0,0),(0,rows),(cols,rows),(cols,0)])  # 0-1-2-3
     print(empty)
     cv2.imshow('image',image)
-    cv2.imwrite('grid.png',image)
+    cv2.imwrite('Results//grid1.png',image)
     plt.imshow(image)
     plt.show()
     cv2.waitKey(0)

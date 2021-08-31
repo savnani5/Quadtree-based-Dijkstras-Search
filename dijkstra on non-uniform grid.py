@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # import time
 
 # tick = time.time()
-image = cv2.imread('C:\\Users\\HP\\Desktop\\Fero\\Adaptive A star\\approximate_cell_decomposition\\grid.png')
+image = cv2.imread('Results\\grid.png')
 
 def dijkstra_algo(graph,start,goal):
     
